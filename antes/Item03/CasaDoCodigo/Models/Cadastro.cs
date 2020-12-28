@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CasaDoCodigo.Areas.Identity.Data;
+using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
@@ -68,6 +70,18 @@ namespace CasaDoCodigo.Models
                 Telefone = this.Telefone,
                 UF = this.UF
             };
+        }
+
+        internal void PreencheCadastro(AppIdentityUser usuario)
+        {
+            Bairro = usuario.Bairro;
+            Complemento = usuario.Complemento;
+            Email = usuario.Email;
+            Endereco = usuario.Endereco;
+            Municipio = usuario.Municipio;
+            Nome = usuario.Nome;
+            Telefone = usuario.Telefone;
+            UF = usuario.Uf;
         }
     }
 }
