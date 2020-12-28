@@ -108,7 +108,7 @@ namespace CasaDoCodigo
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Pedido}/{action=BuscaProdutos}/{codigo?}");
+                    template: "{controller=Pedido}/{action=Carrossel}/{codigo?}");
             });
 
             var dataService = serviceProvider.GetRequiredService<IDataService>();
