@@ -10,5 +10,6 @@ namespace CasaDoCodigo
         int? GetPedidoId();
         void SetPedidoId(int pedidoId);
         void ResetPedidoId();
+        string GetClienteId();
     }
 }

@@ -85,7 +85,8 @@ namespace CasaDoCodigo.Repositories
 
             if (pedido == null)
             {
-                pedido = new Pedido();
+                var clienteId = httpHelper.GetClienteId();
+                pedido = new Pedido(clienteId);
                 await dbSet.AddAsync(pedido);
                 await contexto.SaveChangesAsync();
                 httpHelper.SetPedidoId(pedido.Id);
